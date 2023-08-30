@@ -28,12 +28,11 @@ public:
 int main()
 {
 	
-	Student Ayan;
-	Ayan.id = 1234;
-	Ayan.name = "Ayan";
-	Ayan.SetName("Emlie");
-	Ayan.SetAge(23);
-	Ayan.display();
+	Student one;
+	one.SetId(1234);
+	one.SetName("Emlie");
+	one.SetAge(23);
+	one.display();
 
 	
 }
