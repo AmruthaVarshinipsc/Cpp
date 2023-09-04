@@ -27,13 +27,18 @@ public:
 };
 int main()
 {
-	
 	Student one;
 	one.SetId(1234);
 	one.SetName("Emlie");
 	one.SetAge(23);
 	one.display();
 }
+
+
+
+
+
+
 
 //Example 2.1(Protected Case)
 #include<bits/stdc++.h>
@@ -71,6 +76,10 @@ int main()
 	one.SetAge(23);
 	one.display();	
 }
+
+
+
+
 
 
 //Example 2.2
@@ -112,3 +121,51 @@ int main()
 	one.SetData("Emlie",23,235);
 	one.display();
 }
+
+
+
+
+
+
+//Example 3
+#include<bits/stdc++.h>
+using namespace std;
+
+class Person{
+public:
+	Person(){
+		cout<<"Constructor of Base class is called"<<endl;
+	}
+	~Person(){
+		cout<<"Destructor of Base class is called"<<endl;	
+	}	
+};
+class Student:public Person{
+public:
+	Student(){
+		cout<<"Constructor of child class is called"<<endl;
+	}
+	~Student(){
+		cout<<"Destructor of child class is called"<<endl;
+	}
+};
+int main()
+{
+	Student one;	
+}
+//Output:
+// Constructor of Base class is called
+// Constructor of child class is called
+// Destructor of child class is called
+// Destructor of Base class is called
+
+
+
+
+
+
+
+
+
+
+
