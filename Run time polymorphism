@@ -1,0 +1,25 @@
+//runtime polymorphism
+//function overloading
+#include<bits/stdc++.h>
+using namespace std;
+
+class human{
+public:
+	void introduce(){
+		cout<<"Hi I'm human"<<endl;
+	}
+};
+class student:public human{
+public:
+	void introduce(){
+		cout<<"Hi I'm student"<<endl;
+	}
+};
+void Whoisthis(human &P){
+	P.introduce();
+}
+int main(){
+	student s1;
+	s1.introduce();
+	Whoisthis(s1);
+}
